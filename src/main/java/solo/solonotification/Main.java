@@ -54,6 +54,7 @@ public class Main extends PluginBase implements Listener{
 			switch(args[0]){
 				case "확인":
 				case "목록":
+				case "읽기":
 					if(! Notification.hasNotification(sender)){
 						Message.normal(sender, "알림이 없습니다.");
 						return true;
@@ -83,7 +84,7 @@ public class Main extends PluginBase implements Listener{
 							Message.normal(sender, "알림을 삭제하였습니다.");
 							return true;
 						}
-						Message.normal(sender, "해당 인덱스는 존재하지 않습니다.");
+						Message.alert(sender, "해당 인덱스는 존재하지 않습니다.");
 						return true;
 					}catch(Exception e){
 					}
